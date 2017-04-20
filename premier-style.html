@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Premier Style</title>
+
+    <!--On peut déclarer du css à plusieurs endroits, dans une fichier externe
+    qu'on importera avec la balise link et un lien vers le fichier -->
+    <link rel="stylesheet" href="styles/mon-style.css" />
+    <!--dans la balise style, qui s'appliquera donc pour tout le document-->
+    <style>
+        /*On peut appliquer des styles à différents niveaux :
+        sur un type de balise (le moins précis), ici, les paragraphe
+        ciblé avec le nom de la balise seulement*/
+        p {
+            color:red;
+        }
+        /*Sur un id (le plus précis), ici, les éléments ayant l'id para
+        ciblé avec un # */
+        #para {
+            font-size: 35px;
+            color: green;
+        }
+        /*Ou sur une classe (entre balise et id niveau précision), ici, le style
+        s'appliquera sur tous les éléments ayant la classe maClasse
+        ciblé avec un .*/
+        .maClasse {
+            font-weight: bold;
+            color: blue;
+        }
+        /*On peut cibler des éléments spécifiques en utilisant la hierarchie HTML des
+        élément en question.
+        En utilisant deux sélecteurs séparés par un espace, on indique qu'on cible le
+        second sélecteur se trouvant dans le premier sélecteur.
+        Par exemple, ici, nous ciblons tous les paragraphes contenus dans un élément 
+        possédant la classe maClasse. */
+        .maClasse p {
+            text-decoration: underline;
+        }
+        /*On peut également cibler des éléments spécifiques ayant une classe voulu.
+        Ici on cible les éléments de type p ayant une classe maClasse (pas de question
+        d'enfant ou de contenance)
+        
+        On peut appliquer un style à plusieurs sélecteurs en même temps en séparant
+        ceux ci par des virgules (ici on applique également le style à l'id para)*/
+        p.maClasse,
+        #para{
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <!--directement sur la balise dans l'attribut style, où le css ne sera appliqué
+    que sur l'élément en question. On déconseillera d'utiliser cette dernière méthode
+    pour des raisons de clareté, de perte de temps et de maintenabilité-->
+    <p style="">Un p'tit paragraphe</p>
+    
+    <p id="para" class="maClasse">Un autre paragraphe avec id</p>
+
+    <p class="maClasse">Un paragraphe classieux</p>
+
+    <section class="maClasse">Un texte dans une section classieuse
+
+        <p>Un paragraphe dans une section</p>
+    </section>
+
+
+    
+</body>
+</html>

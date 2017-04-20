@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sondage</title>
+</head>
+
+<body>
+    <main>
+        <h1>Sondage d'opinion</h1>
+        <form action="" method="GET">
+            <section>
+                <label for="age">Votre âge : </label>
+                <input type="number" name="age" id="age" min="1" />
+            </section>
+
+            <section>
+                <label for="region">Votre région : </label>
+                <select name="region" id="region">
+                    <option selected disabled>Choisir sa région</option>
+                    <option>Nord</option>
+                    <option>Alsace-loraine</option>
+                    <option>Centre</option>
+                    <option>Ile-de-France</option>
+                    <option>Reste</option>
+                </select>
+            </section>
+
+
+            <section>
+                <label for="email">Votre email : </label>
+                <input type="email"  id="email" name="email"/>
+            </section>
+<!-- section>p+(label+input[type="checkbox"])*6 -->
+            <section>
+                <p>Choisir les points les plus importants pour vous (plusieurs choix possibles)</p>
+                <label for="checkbox1">Faire plein de fric</label>
+                <input type="checkbox" name="important" id="checkbox1" />
+                <label for="checkbox2">Foutre dehors tous ceux qui me ressemblent pas</label>
+                <input type="checkbox" name="important" id="checkbox2" />
+                <label for="checkbox3">niquer le grand capital</label>
+                <input type="checkbox" name="important" id="checkbox3" />
+                <label for="checkbox4">rendre l'argent</label>
+                <input type="checkbox" name="important" id="checkbox4" />
+                <label for="checkbox5">rien</label>
+                <input type="checkbox" name="important" id="checkbox5" />
+                <label for="checkbox6">jambon</label>
+                <input type="checkbox" name="important" id="checkbox6" />
+            </section>
+
+            <section>
+                <p>A quel point le sujet .. est important pour vous ?</p>
+                <label for="radio1">Pas Important</label>
+                <input type="radio" name="sujet" id="radio1" />
+                <label for="radio2">Peu important</label>
+                <input type="radio" name="sujet" id="radio2" />
+                <label for="radio3">neutre</label>
+                <input type="radio" name="sujet" id="radio3" />
+                <label for="radio4">important</label>
+                <input type="radio" name="sujet" id="radio4" />
+                <label for="radio5">Très important</label>
+                <input type="radio" name="sujet" id="radio5" />
+            </section>
+
+            <button>Envoyer</button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

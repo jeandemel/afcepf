@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Positionnements</title>
+
+    <style> 
+        #section-marge div {
+            /*Les margin désignent l'espacement entre deux éléments*/
+            margin: 30px;
+            /*Les paddings définissent l'espacement entre le contenu et le bord d'un
+            élément 
+            (en gros margin = externe    padding = interne*/
+            padding: 10px;
+            border: 2px solid black;
+            /*margin: 30px 30px;
+            margin: 30px 30px 30px 30px;
+            margin-top: 30px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            margin-left: 30px;*/
+        }
+
+        .carre-rouge {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        /*Le positionnement par défaut des éléments est le static*/
+        #classique {
+            position: static;
+        }
+
+        #absolu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #relatif {
+            position: relative;
+            top: -200px;
+        }
+        
+        #relatif2 {
+            position: relative;
+        }
+
+        #fixe {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+
+        }
+
+        /*Les éléments inline ne peuvent pas avoir de taille définit manuellement, 
+        ils feront forcément la taille de leur contenu en largeur et en hauteur.
+        De plus, les éléments inline ne sont pas sensés pouvoir contenir d'élément
+        de type block, ça n'en fait donc pas de très bon candidats pour le positionnement
+        de nos différents éléments sur une page*/
+        #section-inline span {
+            margin: 40px;
+            padding: 30px;
+            width: 100px;
+            height: 100px;
+        }
+
+
+        /*
+            Pour tous les navigateurs modernes, on aura ceci dit tendance à préféré
+            le display flex au float left qui a été spécialement conçu pour ça et
+            qui permet un plus grand contrôle du positionnement de ses éléments
+        */
+        #positionnement {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        /*
+            Pour positionner des éléments de type block les uns à côté des autres, on
+            utilisait jusqu'au CSS3 la propriété float qui à la base est plutôt faite
+            pour faire "flotter" un élément dans un coin d'un texte.
+        */
+        #positionnement .carre-rouge {
+            /*float: left;*/
+            margin: 10px;
+            display: flex;
+            flex-flow:row wrap;
+            justify-content: flex-start;
+        }
+        .carre-blanc {
+            width: 2px;
+            height: 2px;
+            margin: 2px;
+            background-color: white;
+        }
+        /*
+            Il faut ensuite dire à l'élément suivant les éléments en float de 
+            clear celui ci, sous peine de se retrouver avec des comportement "étranges"
+        */
+        /*#section-marge {
+            clear:both;
+        }*/
+    </style>
+</head>
+<body>
+
+    <section id="positionnement">
+        <div class="carre-rouge">
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+            <div class="carre-blanc"></div>
+
+        </div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+        <div class="carre-rouge"></div>
+
+    </section>
+
+    <section id="section-marge">
+        <h2>Exemple de marge</h2>
+
+        <div>un truc dans un div</div>
+        <div>un truc dans un autre div</div>
+        <div>et un troisième div</div>
+
+    </section>
+
+    <!--<section>
+        <div class="carre-rouge" id="classique"></div>
+        <div class="carre-rouge" id="absolu"></div>
+        <div class="carre-rouge" id="relatif"></div>
+        <div class="carre-rouge" id="relatif2"></div>
+        <div class="carre-rouge" id="fixe"></div>
+
+    </section>-->
+
+
+    <section id="section-inline">
+        <span>ga</span>
+        <span>zo</span>
+        <span>bu</span>
+        <span>meu</span>
+        <span>ga</span>
+        <span>zo</span>
+        <span>bu</span>
+        <span>meu</span>
+        <span>ga</span>
+        <span>zo</span>
+        <span>bu</span>
+        <span>meu</span>
+        <span>ga</span>
+        <span>zo</span>
+        <span>bu</span>
+        <span>meu</span>
+        <span>ga</span>
+        <span>zo</span>
+        <span>bu</span>
+        <span>meu</span>
+
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+</head>
+<body>
+    <!-- Les formulaires sont la seule manière de faire des requêtes HTTP depuis un document HTML
+    en utilisant uniquement du HTML.
+    On les crée avec la balise form qui attend un attribut action, pointant vers la ressource à requêter, et
+    un attribut method qui indique quel type de méthode HTTP sera réalisé. -->
+    <form action="liens.html" method="GET">
+        <!-- On transmettra des informations avec notre requête par le biais d'input qui devront posséder 
+        un name, qui sera le "nom de variable" associé à la valeur de l'input.
+        On utilise les lable pour décrire les inputs/select associées. Pour associé un label à un input/select, on
+        indique dans l'attribut for du label l'id de l'input/select auquel il se réfère (ce qui aidera pour 
+        l'accessibilité et le référencement)
+         -->
+        <label for="id-test">Input test</label><input type="text" name="test" id="id-test" />
+        <!-- les menus déroulant seront représentés par des balises select, les différents choix possible du
+        menu seront des options. Le contenu de l'option sera le texte affiché à l'utilisateur, la value sera la
+        valeur envoyée par la requête si l'on sélectionne cette option (dans le cas où l'option n'a pas de value,
+        celle ci sera égale au contenu de l'option)
+        On peut faire des sélections multiple en utilisant l'attribut multiple dans le select-->
+        <label for="alimentation">Alimentation</label>
+        <select id="alimentation" name="alimentation">
+            <option value="1">Carnée</option>
+            <option value="2">Végétarien</option>
+            <option>Flexitarien</option>
+            <option>Végétalien</option>
+        </select>
+
+        <!-- pour les boutons radio (choix unique), on utilise la balise input en lui mettant un type radio
+        on regroupera les différents bouton entre eux en leur mettant le même name. Pour indiquer quelle valeur
+        envoyer selon le bouton choisis, on indique une value à nos input 
+        Celle ci n'est pas visible, il faut donc rajouter des label (ou autre) si on souhaite mettre du texte face
+        aux boutons radios -->
+        <label for="choix1-ga">ga</label><input type="radio" name="choix1" value="ga" id="choix1-ga" />
+        <label for="choix1-zo">zo</label><input type="radio" name="choix1" value="zo" id="choix1-zo" />
+        <label for="choix1-bu">bu</label><input type="radio" name="choix1" value="bu" id="choix1-bu" />
+
+        <!-- Pour les cases à cocher, on fera exactement comme pour les boutons radio mais en remplaçant le
+        type de l'input par checkbox -->
+        <label>ga</label><input type="checkbox" name="choix2" value="ga" />
+        <label>zo</label><input type="checkbox" name="choix2" value="zo" />
+        <label>bu</label><input type="checkbox" name="choix2" value="bu" />
+
+
+        <!-- pour soumettre le formulaire avec un click, on utilie un input type submit ou un button
+        type submit (un button placé dans un form sera implicitement un submit) -->
+        <button type="submit">Envoyer requête</button>
+
+    </form>
+    
+</body>
+</html>

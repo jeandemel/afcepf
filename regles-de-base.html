@@ -1,0 +1,20 @@
+<!-- Règle n°1 quand on ouvre une balise, on la ferme.  -->
+
+<balise></balise>
+<balise />
+
+<!-- Règle n°2 il ne faut pas faire d'ouverture / fermeture entrecroisées -->
+
+<balise1><balise2></balise1></balise2><!-- ça c'est pas bon -->
+<balise1><balise2></balise2></balise1> <!-- ça c'est bon -->
+
+<!-- Niveau de la nomenclature des fichiers, on préférera éviter les majuscules,
+les accents, les caractères spéciaux et les espaces et favoriser le "kebab-case"
+mot en minuscules séparés par des tirets 
+exemple : un-nom-de-fichier-correct.html
+contre exemple : UnNom de Fichier de Merde.html
+-->
+
+
+<!-- plot twist, en fait tout ça c'est pas bon, pasqu'il manque plein de truc pour
+que ça soit un document html correct-->
