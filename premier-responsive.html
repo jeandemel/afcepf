@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Premier Responsive</title>
+    <!--
+        On peut indiquer une feuille de style externe qui dont le contenu ne s'appliquera que dans un
+        certain context en utilisant l'attribut media qui attend en argument la même syntaxe que le @media
+    -->
+    <link rel="stylesheet" media="(min-width: 600px) and (max-width:999px)" href="styles/style-600-999.css">
+    <style>
+        /*
+            Le responsive design consiste à avoir un style css qui s'adaptera aux 
+            différents supports sur lesquels le site sera visionner.
+            Exemple : La disposition des colonnes et des menus qui change
+            lorsque l'on consulte le site sur un mobile.
+            On utilise pour cela les Media Queries
+        */
+
+        /*On peut continuer à utiliser des styles css classiques qui seront partagés
+        par tous les écrans*/
+        .carre {
+            width: 50px;
+            height: 50px;
+            margin: 30px;
+            border: 1px solid black;
+        }
+        /*
+            Mais l'on pourra définir des styles spécifiques qui ne s'appliqueront que 
+            dans certaines conditions liés au device utilisé par l'utilisateur.
+            Ici on applique un style pour les écran ayant une taille minimale de 
+            1000px.
+        */
+        @media (min-width: 1000px) {
+            .carre {
+                background-color: red;
+            }
+        }
+        /*
+            On peut indiquer plusieurs conditions à remplir en les séparant par
+            un and. 
+            Ici le style ne s'appliquera que pour les écrans d'une taille comprise entre
+            600 et 999 pixels.
+        */
+        @media (min-width: 600px) and (max-width:999px) {
+            .carre {
+                background-color: salmon;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="carre"></div>
+    
+</body>
+</html>

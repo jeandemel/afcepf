@@ -1,0 +1,103 @@
+/************************  
+        SQUELETTE
+************************/
+html,body {
+    height: 100%;
+} 
+
+#conteneur {
+    width: 900px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: tan;
+}
+
+#conteneur header {
+    background-color: chartreuse;
+    height: 60px;
+    width: 100%;
+}
+
+#conteneur .flex-content{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#conteneur nav {
+    width: 200px;
+    background-color: pink;
+}
+#conteneur main {
+    width: 460px;
+    padding: 20px;
+    background-color: coral;
+}
+#conteneur aside {
+    width: 160px;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+/*********************
+        MENU
+**********************/
+nav ul, nav li {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+nav .menu a {
+    display:block;
+    height: 30px;
+    line-height: 30px;
+    background-color: teal;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+nav .menu a:hover,
+nav .menu a.link-active {
+    background-color: #009999;
+}
+
+@media (min-width:360px) and (max-width:900px) {
+
+    #conteneur {
+        width: 700px;
+    }
+
+    #conteneur aside {
+        width: 500px;
+    }
+
+    #conteneur .flex-content {
+        justify-content: flex-end;
+    }
+}
+
+
+@media (max-width:360px) {
+
+    #conteneur {
+        width: 360px;
+    }
+
+    #conteneur .flex-content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #conteneur nav,
+    #conteneur aside,
+    #conteneur main {
+        width: 100%;
+    }
+
+}
+

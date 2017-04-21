@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        .bleu {
+            background-color: blue;
+            height: 10px;
+        }
+        
+        .rouge {
+            background-color: red;
+            height: 10px;
+        }
+        
+        .jaune {
+            background-color: yellow;
+            height: 10px;
+        }
+        
+        header {
+            background-color: chartreuse;
+            height: 60px;
+        }
+        
+        nav {
+            /*padding: 20px;*/
+            background-color: pink;
+        }
+        
+        main {
+            /*padding: 20px;*/
+            background-color: coral;
+        }
+        
+        aside {
+            /*padding: 20px;*/
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    Bootstrap fonctionne sur un système de grille à 12 cellules/colonnes.
+    On indique avec des classes combien de cellules/colonnes prend chaque élément
+    selon la taille du device.
+    col-xs pour les téléphones
+    col-sm pour le tablettes
+    col-md pour les desktop de taille moyenne
+    col-lg pour les desktop de grande tailles
+    (les tailles en pixels sont dispo sur le site off)
+
+
+-->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="bleu col-md-4 col-sm-4"></div>
+            <div class="rouge col-md-4 col-sm-8"></div>
+            <div class="jaune col-md-4 col-sm-8 col-sm-offset-4"></div>
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid">
+        <div class="row">
+            <header class="col-md-12">meu</header>
+        </div>
+        <div class="row">
+            <nav class="col-md-3 col-sm-3 col-xs-12">ga</nav>
+            <main class="col-md-6 col-sm-9 col-xs-12">zo</main>
+            <aside class="col-md-3 col-sm-9 col-sm-offset-3 col-xs-12">bu</aside>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
