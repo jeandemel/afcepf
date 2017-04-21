@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        button {
+            display: block;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: white;
+        }
+        /*on peut assigner des styles spécifiques à des éléments selon leur "état".
+        Ici, on cible les bouton survolés par la souris.*/
+        
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        button:active {
+            background-color: red;
+        }
+        
+        #material {
+            display: block;
+            padding: 10px;
+            border: none;
+            background-color: teal;
+            color: white;
+            box-shadow: 1px 1px 2px grey;
+            margin: 20px;
+        }
+        
+        #material:hover {
+            box-shadow: 2px 1px 4px grey;
+            background-color: #009999
+        }
+        /*On peut cibler des éléments contenus dans d'autres éléments dans 
+        un état particulier.
+        Ici on change le style des paragraphe contenus dans une section en hover.*/
+        
+        section:hover p {
+            font-size: 30px;
+        }
+        
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .categorie {
+            display: flex;
+        }
+        
+        .categorie li {
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+            line-height: 30px;
+            text-indent: 10px;
+        }
+        
+        .categorie li:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .categorie .menu {
+            color: black;
+            display: none;
+        }
+        
+        .categorie li:hover>.menu {
+            display: block;
+        }
+
+        .categorie .menu .menu{
+            position: relative;
+            top: -100%;
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Click !</button>
+
+    <button id="material">Bloup</button>
+
+    <section>
+        <!--<p>Avec du texte dedans</p>-->
+
+    </section>
+
+    <ul class="categorie">
+        <li>Categorie 1
+            <ul class="menu">
+                <li>Menu 1</li>
+                <li>Menu 2 >
+                    <ul class="menu">
+                        <li>Sous Menu 1</li>
+                        <li>Sous Menu 2</li>
+                        <li>Sous Menu 3</li>
+                    </ul>
+                </li>
+                <li>Menu 3</li>
+            </ul>
+        </li>
+        <li>Categorie 2
+            <ul class="menu">
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3 >
+                    <ul class="menu">
+                        <li>Sous Menu 1</li>
+                        <li>Sous Menu 2</li>
+                        <li>Sous Menu 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Categorie 3
+            <ul class="menu">
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+            </ul>
+        </li>
+    </ul>
+
+
+</body>
+
+</html>
